@@ -1,0 +1,14 @@
+<div class="login-container">
+    <% if (locals?.error) { %>
+    <div class="alert alert-error">
+        <%= error %>
+    </div>
+    <% } %>
+    <h2>Login</h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+    </form>
+    <p><a href="/register">Register new account</a></p>
+</div>
